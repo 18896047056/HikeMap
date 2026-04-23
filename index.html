@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D 登山路线 Demo</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.css"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div class="toolbar">
+    <button id="btn3d">3D视角</button>
+    <button id="btn2d">2D视角</button>
+    <button id="btnReset">重置视角</button>
+  </div>
+
+  <div id="panoModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="panoTitle">实景全景</span>
+        <button id="closePano">关闭</button>
+      </div>
+
+      <div class="viewer-wrap" id="viewerWrap">
+        <img id="panoImage" src="" alt="实景图" />
+        <iframe id="panoFrame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@5.23.0/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

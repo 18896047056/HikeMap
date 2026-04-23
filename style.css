@@ -1,0 +1,131 @@
+html, body, #map {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.toolbar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.toolbar button {
+  border: none;
+  background: rgba(255,255,255,0.95);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.popup-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.popup-card p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.popup-card button {
+  margin-top: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  position: absolute;
+  inset: 5%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111827;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.modal-header button {
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.viewer-wrap {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none; /* 关键：允许我们自己处理触摸缩放 */
+}
+
+#panoImage,
+#panoFrame {
+  display: none;
+  border: none;
+}
+
+#panoImage {
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: grab;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+#panoImage.dragging {
+  cursor: grabbing;
+}
+
+#panoFrame {
+  width: 100%;
+  height: 100%;
+}

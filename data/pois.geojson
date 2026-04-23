@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "p1",
+        "title": "登山口",
+        "type": "start",
+        "cueText": "你会看到入口木牌和上山步道。",
+        "actionText": "沿主路向上，不要进入左侧小路。",
+        "panoUrl": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.39085, 47.27574]
+        
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "p2",
+        "title": "岔路口",
+        "type": "junction",
+        "cueText": "右边是石阶，左边是土路。",
+        "actionText": "走右边石阶，不走左边土路。",
+        "panoUrl": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.39610, 47.27960]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "p3",
+        "title": "观景点",
+        "type": "view",
+        "cueText": "右侧视野开阔，可以看到山谷。",
+        "actionText": "休息后继续沿主路线前进。",
+        "panoUrl": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [11.40100, 47.28300]
+      }
+    }
+  ]
+}
